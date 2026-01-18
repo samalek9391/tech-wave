@@ -50,6 +50,12 @@
     margin-left: 32px;
 }
 
+.nav-menu a:hover {
+    background: linear-gradient(90deg, #F7E93F, #FB09B4, #9100F8);
+    padding: 2px 5px;
+    border-radius: 10px;
+}
+
 /* Banner Section Styles */
 
 
