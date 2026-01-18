@@ -56,6 +56,13 @@
     border-radius: 10px;
 }
 
+.hamburger-menu {
+    display:none;
+    width: 18px;
+    height: auto;
+    cursor: pointer;
+}
+
 /* Banner Section Styles */
 
 
@@ -77,3 +84,57 @@
 
 
 /* Responsive Styles */
+
+@media screen and (max-width: 576px) {
+    /* nav bar */
+.nav-container {
+    padding: 18px 20px;
+}
+
+.hamburger-menu {
+    display:flex;
+    width: 18px;
+    height: auto;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: none;
+}
+
+button {
+    display: none;
+}
+
+}
+
+
+/* for 576px to 992px */
+
+@media screen and (min-width:576px) and (max-width: 992px) {
+
+     /* nav bar */
+.nav-container {
+    padding: 18px 150px;
+}
+
+.hamburger-menu {
+    display:flex;
+    width: 18px;
+    height: auto;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: none;
+}
+
+button {
+    display: none;
+}
+
+
+
+
+}
+
