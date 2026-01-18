@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+}
+
+/* Shared Styles */
+
+.bg-color-nav {
+    background-color: #412567;
+    color: #ffffff;
+}
+
+.btn-primary {
+    padding: 12px 16px;
+    color: #ffffff;
+    background: linear-gradient(45deg, #F7E93F, #FB09B4, #9100F8);
+    font-weight: 600;
+    border-radius: 10000px;
+    border: none;
+}
+/* Nav Bar Section Styles */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 200px;
+}
+
+.nav-logo {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.wave {
+    background: linear-gradient(90deg, #F7E93F, #FB09B4, #9100F8);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+.nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 32px;
+}
+
+/* Banner Section Styles */
+
+
+/* Podcast Section Styles */
+
+
+/* Choose Section Styles */
+
+
+/* Episods Section Styles */
+
+
+/* Meet Section Styles */
+
+
+/* Footer Section Styles */
+
+
+
+
+/* Responsive Styles */
