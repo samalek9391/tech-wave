@@ -35,13 +35,13 @@
     font-size: 32px;
     font-weight: 700;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .wave {
     background: linear-gradient(90deg, #F7E93F, #FB09B4, #9100F8);
     -webkit-background-clip: text;
     color: transparent;
-    display: inline-block;
 }
 
 .nav-menu a {
