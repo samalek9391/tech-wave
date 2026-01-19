@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+body {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .inter-font {
   font-family: "Inter", sans-serif;
 }
@@ -11,7 +17,7 @@
 /* Shared Styles */
 
 .bg-color-nav {
-    background-color: #412567;
+    background-color: #1A0B2E;
     color: #ffffff;
 }
 
@@ -23,11 +29,22 @@
     border-radius: 10000px;
     border: none;
 }
+
+.btn-secondary {
+    color: #00FF88;
+    border: 2px solid #00FF88;
+    padding: 12px 20px;
+    border-radius: 10000px;
+    background: none;
+}
+
 /* Nav Bar Section Styles */
+
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 2px solid #290d4e;
     padding: 24px 200px;
 }
 
@@ -64,9 +81,106 @@
 }
 
 /* Banner Section Styles */
+.banner-container {
+    text-align: center;
+    background-image: url(../assets/hero-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* padding: 100px; */
+}
+.banner-badge {
+    width: 75px;
+    height: 38px;
+    background-color: #00FF88;
+    position: absolute;
+    right: 750px;
+    top: 200px;
+    border-radius: 10000px;
+    padding: 8px 16px;
+    z-index: 3;
+    box-shadow: 0px 3px 27px 0px rgba(0, 255, 136, 0.5);
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+.banner-circle {
+    position: relative;
+    bottom: 50px;
+    margin-top: 100px;
+    z-index: 1;
+}
+.banner-mic {
+    z-index: 2;
+    position: absolute;
+    bottom: 540px;
+    right: 870px;
+}
+
+.banner-title {
+    font-size: 3.75rem;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+.banner-description {
+    margin-bottom: 24px;
+    color: #ffffff;
+}
+
+.banner-button {
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding-bottom: 101px;
+}
 
 
 /* Podcast Section Styles */
+.podcast {
+    text-align: center;
+    background-color: #1A0B2E;
+}
+
+.podcast-content {
+    border-bottom: 2px solid #290d4e;
+    margin: 0px 200px 160px;
+    padding-top: 50px;
+}
+
+.podcast-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.podcast-description {
+    line-height: 20px;
+    color: #ffffff;
+    margin-bottom: 80px;
+}
+
+.podcast-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding-bottom: 120px;
+}
+
+.podcast-card h4 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #00FF88;
+}
+
+.podcast-card p {
+    line-height: 20px;
+    color: #ffffff
+}
+
+
+
 
 
 /* Choose Section Styles */
