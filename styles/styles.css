@@ -186,7 +186,6 @@ body {
 
 .choose-section {
     background-color: #230E3D;
-    margin-bottom: 100px;
 }
 
 .choose-title h2 {
@@ -249,7 +248,52 @@ body {
 
 /* Episods Section Styles */
 
+.episodes {
+    background-color: #1A0B2E;
+}
 
+.episodes-title {
+    padding-top: 120px;
+    text-align: center;
+}
+
+.episodes-title h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.episodes-card-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    padding: 40px 200px 120px;
+}
+
+.episodes-card {
+    background-color: #250D44;
+    border-radius: 10px;
+    padding-bottom: 24px;
+}
+
+.episodes-card-title {
+    color: #ffffff;
+    padding: 24px 24px 12px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.episodes-card-description {
+    padding: 0px 24px 12px;
+    color: #ffffff;
+    line-height: 24px;
+}
+
+.episodes-card-time {
+    color: #00FF88;
+    font-weight: 600;
+    padding: 24px 24px 24px;
+}
 /* Meet Section Styles */
 
 
