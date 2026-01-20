@@ -30,12 +30,30 @@ body {
     border: none;
 }
 
+.btn-primary:hover {
+    padding: 12px 16px;
+    color: #ffffff;
+    background: none;
+    font-weight: 600;
+    border-radius: 10000px;
+    border: 2px solid #FB09B4;
+}
+
 .btn-secondary {
     color: #00FF88;
     border: 2px solid #00FF88;
     padding: 12px 20px;
     border-radius: 10000px;
     background: none;
+}
+
+.btn-secondary:hover {
+    color: #000000;
+    border: 2px solid #00FF88;
+    padding: 12px 20px;
+    border-radius: 10000px;
+    background: #00FF88;
+    font-weight: 600;
 }
 
 /* Nav Bar Section Styles */
@@ -69,7 +87,7 @@ body {
 
 .nav-menu a:hover {
     background: linear-gradient(90deg, #F7E93F, #FB09B4, #9100F8);
-    padding: 2px 5px;
+    padding: 5px 10px;
     border-radius: 10px;
 }
 
@@ -86,22 +104,41 @@ body {
     background-image: url(../assets/hero-bg.png);
     background-repeat: no-repeat;
     background-position: center;
-    /* padding: 100px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .banner-badge {
     width: 75px;
     height: 38px;
     background-color: #00FF88;
-    position: absolute;
-    right: 750px;
-    top: 200px;
+    position: relative;
+    left: 175px;
+    top: 150px;
     border-radius: 10000px;
     padding: 8px 16px;
     z-index: 3;
     box-shadow: 0px 3px 27px 0px rgba(0, 255, 136, 0.5);
     font-size: 1.125rem;
     font-weight: 600;
+    animation: badgeFloat 2s ease-in-out infinite;
 }
+
+@keyframes badgeFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+.banner-badge:hover {
+    animation: none;
+}
+
 .banner-circle {
     position: relative;
     left: 60px;
@@ -109,11 +146,42 @@ body {
     margin-top: 100px;
     z-index: 1;
 }
+
 .banner-mic {
-    z-index: 2;
+    background: url(../assets/hero-circle.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    animation: microtate 4s ease-in-out infinite;
+}
+
+@keyframes microtate {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.05) rotate(180deg);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+.banner-mic:hover {
+    animation: none;
+}
+
+.banner-mic img {
+    width: 117px;
+    height: 175px;
     position: relative;
-    bottom: 130px;
-    right: 170px;
+    top: 80px;
+    
+   
 }
 
 .banner-title {
@@ -356,9 +424,10 @@ body {
     text-align: center;
     background-color: #351165;
     background: url(../assets/footer-bg.png); */
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
+    width: 100%;
 }
 
 .footer-icon-container {
@@ -395,7 +464,13 @@ body {
 /* Responsive Styles */
 
 @media screen and (max-width: 576px) {
-    /* nav bar */
+    
+    body {
+    max-width: 440px;
+    width: 100%;
+    margin: 0 auto;
+}
+    /* nav bar upto 576px */
 .nav-container {
     padding: 18px 20px;
 }
@@ -413,6 +488,119 @@ body {
 
 button {
     display: none;
+}
+
+/* Banner Section Styles upto 576px */
+
+   .banner-mic {
+    width: 220px;
+    height: 220px;
+}
+
+.banner-mic img {
+    width: 46px;
+    height: 70px;
+    position: relative;
+    top: 80px;
+}
+
+.banner-badge {
+    width: 70px;
+    height: 35px;
+    left: 100px;
+    top: 100px;
+}
+.banner-title {
+    font-size: 2.5rem;
+}
+
+/* Podcast Section Styles upto 576px */
+
+.podcast-content {
+    border-bottom: 2px solid #290d4e;
+    margin: 0px 20px 40px;
+    padding-top: 50px;
+}
+
+.podcast-card-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+/* Choose Section Styles upto 576px */
+
+.choose-title h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 40px 0px 10px;
+}
+
+.choose {
+    display: grid;
+    padding: 0 20px 16px;
+    grid-template-areas:
+        "audio-quality" 
+        "mobile-friendly" 
+        "global-community"
+        "exclusive-interviews" 
+        "rich-resources";
+}
+
+/* Episode Section Styles upto 576px */
+.episodes-title {
+    padding-top: 40px;
+}
+
+.episodes-card-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    padding: 40px 20px 60px;
+}
+
+.meet-title {
+    padding-bottom: 24px;
+    font-size: 2rem;
+}
+
+.host-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 24px 20px 0px;
+    gap: 24px;
+
+}
+.host-social-icon {
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Footer Section Styles upto 576px */
+
+.footer-title {
+    padding: 40px 0px 24px;
+    font-size: 4rem;
+}
+.footer-icon-container {
+    width: 255px;
+    flex-wrap: wrap;
+    /* padding-bottom: 135px; */
+    margin: 0 auto;
+}
+.footer-icon {
+    justify-content: center;
+
+}
+.copyright {
+    color: #ffffff;
+    line-height: 24px;
+    padding-bottom: 40px;
 }
 
 }
@@ -442,7 +630,117 @@ button {
     display: none;
 }
 
+/* Banner Section Styles 576px 992px */
 
+   .banner-mic {
+    width: 220px;
+    height: 220px;
+}
+
+.banner-mic img {
+    width: 46px;
+    height: 70px;
+    position: relative;
+    top: 80px;
+}
+
+.banner-badge {
+    width: 70px;
+    height: 35px;
+    left: 100px;
+    top: 100px;
+}
+.banner-title {
+    font-size: 2.5rem;
+}
+
+/* Podcast Section Styles 576px 992px */
+
+.podcast-content {
+    border-bottom: 2px solid #290d4e;
+    margin: 0px 20px 40px;
+    padding-top: 50px;
+}
+
+.podcast-card-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+/* Choose Section Styles 576px 992px */
+
+.choose-title h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 40px 0px 10px;
+}
+
+.choose {
+    display: grid;
+    padding: 0 20px 16px;
+    grid-template-areas:
+        "audio-quality" 
+        "mobile-friendly" 
+        "global-community"
+        "exclusive-interviews" 
+        "rich-resources";
+}
+
+/* Episode Section Styles 576px 992px */
+.episodes-title {
+    padding-top: 40px;
+}
+
+.episodes-card-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    padding: 40px 20px 60px;
+}
+
+.meet-title {
+    padding-bottom: 24px;
+    font-size: 2rem;
+}
+
+.host-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 24px 20px 0px;
+    gap: 24px;
+
+}
+.host-social-icon {
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Footer Section Styles 576px 992px */
+
+.footer-title {
+    padding: 40px 0px 24px;
+    font-size: 4rem;
+}
+.footer-icon-container {
+    width: 255px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.footer-icon {
+    justify-content: center;
+
+}
+.copyright {
+    color: #ffffff;
+    line-height: 24px;
+    padding-bottom: 40px;
+}
 
 
 }
