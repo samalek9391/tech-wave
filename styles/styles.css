@@ -576,6 +576,12 @@ button {
     gap: 24px;
 
 }
+
+.host-image, .host-content {
+  padding-left: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
 .host-social-icon {
     text-align: center;
     margin: 0 auto;
